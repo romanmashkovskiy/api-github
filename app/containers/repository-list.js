@@ -1,17 +1,12 @@
 import React, {Component} from 'react';
 import {bindActionCreators} from 'redux';
 import { connect } from 'react-redux';
-import { select, getList} from "../actions";
 
 
 class  RepositoryList extends Component {
     constructor(props) {
         super(props);
 
-    }
-
-    componentWillMount(){
-        this.props.getList();
     }
 
     render() {
@@ -31,8 +26,7 @@ function mapStateToProps (state) {
 
 function matchDispatchToProps (dispatch) {
     return bindActionCreators({
-        select: select,
-        getList: getList
+
     },
         dispatch)
 }

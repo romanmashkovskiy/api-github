@@ -1,11 +1,12 @@
 import  React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import {createStore} from 'redux';
-import allReducers from './reducers/index';
+import configureStore from './store/configureStore';
 import App from './components/appview';
+import {loadList} from './actions/index';
 
-const store = createStore(allReducers);
+const store = configureStore();
+store.dispatch(loadList());
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import repositories from './repository';
+import listReducer from './list-reducer';
 
 
-const allReducers = combineReducers({
-    repositories: repositories
+const rootReducer = combineReducers({
+    listReducer: listReducer
 });
 
-export default allReducers;
+export default rootReducer;
