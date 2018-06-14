@@ -14,3 +14,10 @@ export function loadList() {
 export function loadListSuccess(response) {
     return {type: 'LOAD_DATA_SUCCESS', payload: response};
 }
+
+export const select = (repository) => {
+    return {
+        type: "REPOSITORY_SELECTED",
+        payload: repository
+    }
+};
