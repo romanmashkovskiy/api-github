@@ -1,4 +1,5 @@
 import listApi from '../api/listApi';
+import * as types from './action-types';
 
 export function loadList() {
     return function(dispatch) {
@@ -12,12 +13,12 @@ export function loadList() {
 }
 
 export function loadListSuccess(response) {
-    return {type: 'LOAD_DATA_SUCCESS', payload: response};
+    return {type: types.LOAD_DATA_SUCCESS, payload: response};
 }
 
 export const select = (repository) => {
     return {
-        type: "REPOSITORY_SELECTED",
+        type: types.REPOSITORY_SELECTED,
         payload: repository
     }
 };

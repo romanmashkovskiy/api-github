@@ -7,6 +7,7 @@ import {loadList} from './actions/index';
 
 const store = configureStore();
 store.dispatch(loadList());
+console.log(process.env.NODE_ENV);
 
 ReactDOM.render(
     <Provider store={store}>
