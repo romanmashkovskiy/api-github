@@ -7,7 +7,8 @@ import {loadList} from './actions/index';
 
 
 
-// require('dotenv').config();
+require('dotenv').config();
+
 console.log(process.env);
 
 const store = configureStore();

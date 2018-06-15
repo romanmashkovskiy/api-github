@@ -1,4 +1,5 @@
 var path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: "./app/index.js", // входная точка - исходный файл
@@ -18,5 +19,11 @@ module.exports = {
                 }
             }
         ]
+    },
+    plugins: [
+        new Dotenv()
+    ],
+    node: {
+        fs: 'empty'
     }
 }
